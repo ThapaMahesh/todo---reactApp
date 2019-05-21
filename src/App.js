@@ -22,17 +22,22 @@ class App extends Component {
 	}
 
 	removeItem = (id) => {
-		var index = this.itemList.findIndex(x => x.id === id);
+		let index = this.itemList.findIndex(x => x.id === id);
 
-		this.itemList.splice(index, 1);
-    	this.setState({items: this.itemList});
+		if(index > -1){
+			this.itemList.splice(index, 1);
+	    	this.setState({items: this.itemList});
+	    }
 	}
 
 	changeStatus = (id) => {
-		var index = this.itemList.findIndex(x => x.id === id);
-		this.itemList[index].done = !this.itemList[index].done;
+		let index = this.itemList.findIndex(x => x.id === id);
 
-	    this.setState({items: this.itemList});  
+		if(index > -1){
+			this.itemList[index].done = !this.itemList[index].done;
+
+		    this.setState({items: this.itemList});  
+		}
 	}
 
 	render () {

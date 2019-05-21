@@ -14,7 +14,7 @@ class TodoList extends Component {
   }
 
   createListView = item => {
-  	var todoClass = item.done ? "text-success complete" : "text-danger";
+  	let todoClass = item.done ? "text-success complete" : "text-danger";
     return (
     		<li key={item.id} className="list-group-item ">
 		        <div>

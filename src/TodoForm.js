@@ -15,7 +15,7 @@ class TodoForm extends Component {
 	onSubmit = e => {
 		e.preventDefault();
 
-		var newTask = this.state.value;
+		let newTask = this.state.value;
 
 		if(newTask !== ""){
 			this.props.addItem({newTask});
